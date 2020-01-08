@@ -8,15 +8,16 @@ This library needs to merge "Lis" for DD iterative solver.
 Official support "Lis" version is "lis-1.4.58".
 After merge "lis" and "DD-AVX", the interface is same as "lis".
 
-1 Merging DD-AVX and lis
+## Merging DD-AVX and lis
 	1.1 download "lis-1.4.58" from web site.
 	1.2 put "DD-AVX" and "lis-1.4.58" on same dir.
 	1.3 sh ./merge.sh [lis dir] [DD-AVX dir] [output dir]
 
-2 Installing
+## Installing
 	please type "Configure" and "make"
 	example of configure and make is Configure.sh
 		2.1 configure 
+```
 			[command]$ ./configure [options]
 				options
 					CC=[compiler]
@@ -26,17 +27,17 @@ After merge "lis" and "DD-AVX", the interface is same as "lis".
 					[--enable-sse2]
 					[--enable-avx]
 					[--enable-avx2]
+```
 	
 		2.2 make
+```
 			[command]$ make
 	
-3 Sample code (output_dir/test)	
-	1 dont use MPI
-		test/test1 [options]
+```
+## Sample code (output_dir/test)	
+	1 dont use MPI: `test/test1 [options]`
 		
-	2 use MPI
-		mpirun -np [proc]  test/test1 [options]
+	2 use MPI: `mpirun -np [proc]  test/test1 [options]`
 
-4 compile your code
-	please type
-	gcc a.c -L [output_dir]/src/.libs -I [output]/include
+## compile your code
+	please type `gcc a.c -L [output_dir]/src/.libs -I [output]/include`
